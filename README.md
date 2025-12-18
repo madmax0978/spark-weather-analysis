@@ -64,4 +64,5 @@ data/output/                  # Results
 
 ---
 
-ECE Paris - January 2025
+ECE Paris 
+Maxime Dutertre
