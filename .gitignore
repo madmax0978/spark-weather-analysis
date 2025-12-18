@@ -1,9 +1,9 @@
 # Environment
 .env
 
-# Data files
-data/input/*.json
-data/output/*
+# Data files - Included in Git for project demonstration
+# data/input/*.json
+# data/output/*
 !data/input/.gitkeep
 !data/output/.gitkeep
 

@@ -1,0 +1,16 @@
+type,city,country,value
+Hottest,Lisbon,PT,16.54
+Hottest,Athens,GR,15.72
+Hottest,Paris,FR,15.0
+Hottest,Brussels,BE,12.43
+Hottest,Rome,US,11.67
+Coldest,Prague,CZ,2.31
+Coldest,Vienna,AT,2.65
+Coldest,Warsaw,PL,3.38
+Coldest,Stockholm,SE,5.73
+Coldest,Copenhagen,DK,6.94
+Most Humid,Prague,CZ,95.0
+Most Humid,Vienna,AT,94.0
+Most Humid,London,GB,93.0
+Most Humid,Copenhagen,DK,93.0
+Most Humid,Dublin,US,93.0
