@@ -1,0 +1,22 @@
+# Environment
+.env
+
+# Data files
+data/input/*.json
+data/output/*
+!data/input/.gitkeep
+!data/output/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.Python
+
+# Spark
+.spark-warehouse/
+derby.log
+metastore_db/
+
+# OS
+.DS_Store

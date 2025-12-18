@@ -1,0 +1,34 @@
+services:
+  spark-master:
+    image: apache/spark:3.5.0
+    container_name: spark-master
+    environment:
+      - SPARK_MODE=master
+    ports:
+      - "8080:8080"
+      - "7077:7077"
+      - "4040:4040"
+    volumes:
+      - ./data:/opt/spark/data
+      - ./scripts:/opt/spark/scripts
+    networks:
+      - spark-network
+    command: /opt/spark/bin/spark-class org.apache.spark.deploy.master.Master
+
+  spark-worker:
+    image: apache/spark:3.5.0
+    container_name: spark-worker
+    environment:
+      - SPARK_MASTER=spark://spark-master:7077
+    volumes:
+      - ./data:/opt/spark/data
+      - ./scripts:/opt/spark/scripts
+    networks:
+      - spark-network
+    depends_on:
+      - spark-master
+    command: /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
+
+networks:
+  spark-network:
+    driver: bridge
