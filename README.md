@@ -25,7 +25,7 @@ Spark was chosen for this project because:
 
 **Prerequisites:**
 - Docker & Docker Compose installed
-- Python 3.11+
+- Python 3.11+ installed on the host machine (a virtual environment can be used)
 - OpenWeather API key (free tier)
 
 **Setup:**
@@ -36,13 +36,17 @@ git clone <your-repo-url>
 cd spark-weather-analysis
 ```
 
-2. Get API key from https://openweathermap.org/api
+2. Get an OpenWeather API key 
+Create a free account at https://openweathermap.org/api
 
-3. Configure environment:
+3. Configure environment (host machine, project root directory):
+Creation of `.env` file by executing :
 ```bash
 cp .env.example .env
-# Edit .env with your API key
 ```
+Then edit .env and add your API key:
+
+OPENWEATHER_API_KEY=your_real_api_key_here
 
 4. Install Python dependencies:
 ```bash
@@ -57,6 +61,7 @@ docker-compose up -d
 ## Running the Example
 
 1. Collect weather data:
+run the data collection script on the host machine
 ```bash
 python scripts/collect_weather.py
 ```
@@ -246,6 +251,7 @@ Verified by checking Spark UI (localhost:8080) showing "Running Applications" du
 
 ---
 
-ECE Paris 
+ECE Paris
+
 Maxime Dutertre
 Kim Arjie LUCENA RODRIGO
